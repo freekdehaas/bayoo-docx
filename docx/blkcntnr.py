@@ -59,7 +59,7 @@ class BlockItemContainer(Parented):
         return Table(tbl, self)
 
     @property
-    @lru_cache
+    @lru_cache(maxsize=None)
     def paragraphs(self):
         """A list containing the paragraphs in this container, in document
         order.
